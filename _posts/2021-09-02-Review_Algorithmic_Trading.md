@@ -1,13 +1,9 @@
 ---
-
 title: “Review: algorithmic trading(Jan Fraenkle & Svetlozar, 2009)”
-
 tags:
-
-- Market Micorstructure
-
-- Algorithmic Trading
-
+  - Market Micorstructure
+  -  Algorithmic Trading
+use_math: true
 ---
 
   
