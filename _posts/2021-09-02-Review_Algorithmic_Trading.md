@@ -73,19 +73,4 @@ Market impact를 줄이기 위해 VWAP를 참고하여 전략을 세운다. 시�
 #### TVOL(target volume)
 Benchmark를 설정하지 않고 현재 시점을 기준으로 고정된 target volume을 거래한다. 
 
-## 3. Empirical analysis
 
-### Trading volume
-증권의 trading volume은 유동성을 판단하는데 중요한 지표이다. Trading volume은 seasonality를 띈다. 하루 동안의 거래량을 그래프로 나타내보면 U자형을 띈다. 즉, 시장 개장 직후와 폐장 직전에 높은 거래량이 관측되며, 정오에 가장 적은 량의 거래가 이루어진다.
-
-### Dynamics in trading volume
-PCA(principal component analysis)를 stock turnover에 적용해보면 데이터를 간소화하여 dynamics를 확인할 수 있다. 시간과 asset에 따른 turnover series의 variance-covariance matrix을 decompostion 해주면 다음과 같은 식을 얻을 수 있다.
-$\frac{x_{it}-\bar x_i}{\sigma_i}=\sum_{k}u_k^iC_t^k$
-$x_{it}$는 i번째 asset의 시간t에서의 turnover이며 $u_k^i$는 i번째 component의 k번째 eigenvector이고 $C_t^k=x'_{it}u_k$,$Cov(C_t^k,C_t^l)=\lambda_k\sigma_kl$이다. 그리고 이 식을 다시 재배열하면 다음과 같은 식이 나온다.
-$x_{it}-\bar x_i=\frac{1}{\lambda_1}Cov(x_{it},C_t^1)C_t^1+\sum_{k>1}Cov(x_{it},C_t^k)C_t^k$
-여기서 첫 번째 term은 market turnover, 그 외는 short-term arbitrage라고 해석할 수 있다. Market에 따라 두 번째 항은 일정하며 첫 번째 항이 trend에 따라 변화한다.
-
-## 4. Algorithmic Trading
-
-컴퓨터의 발전에 따라 짧아진 reaction time과 빠른 decision으로 인간이 직접하는 trading에 비해 많은 이점을 갖는다. 이때 strategy를 발전시키고 백테스트하여 좋은 결과를 얻을 수 있도록 해야한다. 
-Market은 fragmented되어있고 execution에 복잡한 영향을 받기에 분석하기 쉽지 않지만, 컴퓨터의 발전으로 미래에는 이를 분석할 수 있을 것이다.
