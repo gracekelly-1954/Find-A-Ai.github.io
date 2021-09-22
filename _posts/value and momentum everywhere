@@ -1,0 +1,109 @@
+---
+title: "Value and Momentum Everywhere (2013, Journal of Finance) : CLIFFORD ASNESS, TOBIAS J. MOSKOWITZ, and LASSE HEJE PEDERSEN"
+tags:
+  - Empirical Asset Pricing
+  - Factor Investing
+  - Liquidity Risk
+use_math: true
+---
+
+이 글은 CLIFFORD ASNESS, TOBIAS J. MOSKOWITZ, and LASSE HEJE PEDERSEN의 Value and Momentum Everywhere을 정리한 post입니다.
+
+
+# Value And Momentum Everywhere
+
+# 0. 들어가며
+
+ 가장 많이 연구된 자본시장현상(Capital Market Phenomena)은 value와 momentum이다. Value Effect는 장기 value 비율과 자산의 수익률간의 관계를 지칭하고, Momentum Effect는 자산의 수익률과 최근의 상대적 수익률간의 관계를 나타낸다. 금융경제학의 역사에서 Value와 Momentum은 시장 효율성 논쟁과 자산 가격결정(Asset Pricing) 연구의 중심이 되었으며, 다양한 이론들을 만들어냈다. 이 논문에서는 각기 다른 8개의 시장과 자산군에 걸쳐 이 효과들의 수익률을 조사하여 이들에 대한 새로운 통찰을 제시한다. 요컨대 이 논문에서는 모든 자산군에서 value와 momentum 효과를 발견했으며, 그들 수익률간의 유의한 수준의 상관관계를 발견했다. 이런 발견들은 risk premia의 존재에 대한 이론들에 대한 도전이다. 
+
+ 본 연구에서는 국채의 value, momentum, 통화와 원자재의 value effect 등 연구한 모든 시장에서 value와 momentum 수익률의 일관되고 보편적인 증거를 발견했는데, 이는 모두 기존 연구에서 찾아볼 수 없는 것이었다. 가장 주목할 만한 것은, 다양한 자산군에서 value와 momentum이 같이 움직인다는 것이다. 예컨대 value는 다른 시장들의 value와 양의 상관관계를 갖고, momentum은 다른 momentum 전략들과 양의 상관관계를 갖는다. 그러나 자산군 내에서나 자산군 간에서 value와 momentum은 음의 상관관계를 가진다.
+
+ 본 연구에서는 이를 이용해 요인 포트폴리오를 만들고 이 모형을 통해 미국 3요인 포트폴리오 뿐 아니라 글로벌 헤지펀드 지수의 수익률 또한 잘 잡아냄을 발견했다. 
+
+ 또한 이 현상의 출처를 조사한다. 여러 거시경제적 변수에 대한 미미한 연관만을 발견할 수 있었으나, 유동성 위험이 value와 음의 상관관계를 가지고 자산군에 걸쳐 전세계적으로 양의 상관관계를 가진다는 유의한 수준의 증거를 발견했다. 
+
+ 다만 이것은 value와 momentum의 결합 premia를 설명할 수는 없다. 또한 모든 자산군에 걸쳐, globally value와 momentum이 양의 상관관계를 갖는다는 것은 기존의 행동 모형들과는 부합하지 않는다. 동시에, 기업의 투자 위험이나 회사의 성장 선택을 통한 설명에 의존하는 합리적 자산가격 결정 이론들 또한 반박한다. 이 이론들은 통화, 국채, 원자재 선물 등에서 발견되는 value effect를 설명하기에는 부족해 보인다. 
+
+ value와 momentum의 유동성 위험에 대한 설명 중 자연스러운 것은 투자자들이 유동성 충격을 받을 때 가장 최근에 인기있는 거래인 momentum에 큰 영향을 미치고 value는 반대라는 것이다. 
+
+# 1. 데이터와 포트폴리오 구성 방법론
+
+## 데이터 출처
+
+ 이 연구에서만 특이한 몇가지 지점이 있다. 주식의 경우 매우 유동적인 주식들로만 구성되었다는 점이다. 여기에서는 한 유니버스에서 시가총액을 누적합하였을 때 90%를 차지하는 구간까지의 주식들을 포함했다고 한다. 이를 통해 본 연구에 사용된 데이터가 매우 보수적으로 산정되었음을 알 수 있다. 
+
+ 글로벌 주가지수에는 18개 선진국 지수들이 포함되었고, 통화는 10개국의 spot환율을 사용하였다고 한다. 글로벌 정부채권 또한 10개 국가를 대상으로 하였다. 원자재 선물은 여러 출처에서 얻은 서로 다른 27개 원자재 선물들을 다루었다. 
+
+ 
+
+## value and momentum measures
+
+ 먼저 서두에서 가장 간단하고 표준적인 방법을 사용하였다고 밝힌다. 개별 주식의 경우 가장 표준적인 방법인 BE/ME를 사용하였다. 파마와 프렌치의 연구에서 사용한 방식을 그대로 사용하였고, 최근의 장부가치를 사용하는 등의 방법은 사용하지 않았다고 밝힌다. 
+
+ 모멘텀의 경우 가장 표준적인 MOM2-12 방식을 사용하였다고 한다. 이는 지난 12개월 동안의 누적 raw return에서 가장 최근 월의 수익률을 건너뛰는 방식이다. 이는 시장 미시구조 이슈와 연관되는데, 다른 자산군들의 경우 최근 1개월을 건너뛰지 않아도 된다고 할지라도 일관성을 위해 그렇게 하였다고 한다. 
+
+ **이 부분이 재밌는데, value 측정의 경우 모든 자산군들이 장부가치를 갖는 것이 아니기 때문에 통일성을 얻기 어렵다. 이러한 자산군들의 경우에 value를 5년 전의 spot pirce에 로그를 취하고, 이를 가장 최근의 spot price로 나누어서, 정리하자마녀 지난 5년간의 spot 수익률에 음을 취한 것으로 정의하였다. 이런 방식은 DeBondt and Thaler(1985)-buying losers, selling winner-에서 영감을 받았다고 한다. Fama and French의 연구는 이런 방식이 BE/ME로 형성된 포트폴리오와 매우 상관관계가 큰 포트폴리오를 생성한다는 것을 보였고, Gerakos and Linnema(2012)는 이 둘의 직접적인 연관성에 대해 연구한 바가 있다—사실상 이 연구의 핵심 중 하나인 것처럼 보입니다(적어도 제게는).** 
+
+ 
+
+### value and momentum portfolios(48 test assets).
+
+ 위의 방식을 사용하여 value, momentum 각각을 3개씩의 그룹으로 분류하여 8개 시장에 적용하였다. 즉 3x2x8=48.개의 포트폴리오를 구성한 것이다. Factor portfolio들의 경우엔 rank weight 방식으로 만들어졌다.
+
+$$w^S_{it}=c_t(rank(S_{it})-\sum_irank(S_{it})/N),\\r^s_{t}=\sum_iw^s_{it}r_{it},\ \ \ where\ S\in(value,momentum).$$
+
+and
+
+$$r_t^{combo}=0.5r^{value}_t+0.5r^{momentum}_t.$$
+
+# 2. value and momentum returns and co-movement
+
+![vnm0](https://user-images.githubusercontent.com/88758317/134271485-58903975-84b2-4f08-b45d-f0a97f307c76.png)
+
+![vnm1](https://user-images.githubusercontent.com/88758317/134271535-220eba69-b0b8-4c4a-8cc6-1851f308970c.png)
+
+![vnm2](https://user-images.githubusercontent.com/88758317/134271570-fb034288-1372-4d74-a022-ab9363991320.png)
+
+![vnm3](https://user-images.githubusercontent.com/88758317/134271611-08195e95-2e42-4ef6-a64e-9ae88662e73d.png)
+
+![vnm4](https://user-images.githubusercontent.com/88758317/134271633-ff4f4e49-2557-4ba9-8a12-fe3007384487.png)
+
+ 위 표가 당연하게도 이 연구의 핵심 중 하나이다. 패널A는 기존 연구와 유사하게 개별 주식 전략의 프리미엄을 나타낸다. 모든 주식 시장에서 value의 상당한 premia가 존재하고, 일본에서 특히 강하다. momentum premia 또한 모든 시장에서 강하지만 일본에서는 통계적 유의성이 없다. 모든 시장에서 value와 momentum이 음의 상관관계를 가진다. combo에서 sharpe ratio가 크게 증가한다. 
+
+ 재밌는 것은 지금부터인데, 일본에서는 모멘텀이 잘 작동하지 않는다는 것이 널리 연구되었었는데, 그만큼 value premium이 크고 상관관계가 여전히 음이라는 것에 주목하자. 그러므로 일본에서 모멘텀이 작동하지 않는 이유를 설명하는 것보다 value가 왜 그렇게 잘 됐는지를 설명하는 것이 더 적절한 가설일 수 있다. 심지어 일본에서도 momentum과 value의 combo가 value 보다 더 나은 성과를 보인다. 
+
+ **일단 주식시장에서, globally diversified 된 value, momentum, combo를 보면 전 세계적으로 적용된 value가 각 시장의 평균 sharpe ratio보다 크지 않은 sharpe ratio를 보이고, momentum 또한 마찬가지다. 이는 전 세계에서 value와 momentum이 co-movement함을 보여준다.**
+
+ 표1의 패널B는 비주식 자산군들에 대한 통계를 보여준다. 다양한 자산군들에서 일관적인 value와 momentum premia가 있으며, 이는 채권, 통화 원자재 선물에서도 마찬가지이다. 수익률 수준에는 차이가 있지만, value와 momentum의 음의 상관관계는 모든 자산군들에서 매우 견고하게 나타난다.
+
+ 자산군별 value, momentum, combo 포트폴리오를 검토했다. 자산군별로 변동성이 다르기 때문에 각 자산군들을 과거 표본 변동성의 역수에 따라 가중하였다(inverse volatility weight portfolios). 이런 방식으로는 sharpe ratio를 아주 약간 개선할 수 있다. **이는 다양한 자산군에 걸쳐 value와 momentum premia의 상관관계가 존재함을 알 수 있게 한다. 이는 생산기준이론, 투자기준이론과 같은 value and momentum effect를 회사에서 찾는 기존 이론에 대한 강한 반박이다. 마찬가지로, 주로 개인투자자들의 행동편향에서 그 이유를 찾는 투자자 행동 이론들에 대한 강한 반박이다. —사실상 이 연구의 가장 큰 핵심인 것 같습니다. 기존의 효율적 시장가설에서 investment risk, growth risk 등에서 value premium이 오는 것이라 설명하는 방식, 또한 다양한 자산군별로 투자자들의 정보체계나 행동편향이 다를 것인데 행동편향으로 이를 설명하고자 하는 기존 연구에 대한 설득력 있는 반박인 것 같습니다(제가 느끼기엔). 이 부분이 매우 흥미롭고, 기존 연구와의 차별점인 것 같습니다.**
+
+ 이후엔 value와 momentum이 모든 자산군에 걸쳐 서로간에 음의 상관관계를 갖고, factor 내부적으로는 양의 상관관계를 가짐을 robust check합니다. 추가로 채권에서 value가 매우 약하게 측정되는데, 이는 측정방법을 달리할 경우 개선될 수 있으나 일관성을 위해 그렇게 하지 않았다고 설명하는 부분이 있습니다.
+
+![vnm5](https://user-images.githubusercontent.com/88758317/134271658-2b54982f-979a-4ee3-8251-2a738f385bd8.png)
+
+ 위 그림은 각각이 글로벌 주식, 모든 자산군에 걸친 value and momentum 수익률에 대한 공분산 행렬의 PC1을 조사하였다. 이 그림을 통해 모든 국가의 글로벌 개별 주식 value and momentum이 반대 방향으로 로드됨을 알 수 있고, 자산군 전반에서도 동일한 현상을 확인할 수 있음을 알 수 있다. PC1이 근본적으로 모든 자산군에서 long momentum and short value를 나타내며, 개별주식 전략들의 공분산 행렬의 54%의 variation을 차지하고, 모든 자산군에서는 23%를 차지함을 알 수 있다. 
+
+# 3. Relation to Macroeconomic and Liquidity Risk
+
+![vnm6](https://user-images.githubusercontent.com/88758317/134271684-804afd73-f940-4cb3-90eb-3f6e3496a964.png)
+
+ 위 표에서 알 수 있듯이, 대부분의 거시 경제적 지표들은 value, momentum과 직접적인 연관을 capture하기 어렵다.
+
+# Liquidity Risk Exposures
+
+ 이 연구에서는 시장 유동성 쇼크(market liquidity shocks)와 자금 유동성 쇼크(funding liquidity shocks)를 모두 고려한다. 이때 각 변수들을 PCA하여 PC를 구성할 때는 공분산행렬이 아닌 상관관계 행렬을 이용했다. 이유는 각 위험들의 변동성을 스케일링 하기 위해서이다. 또한 이 위험은 이전 연구를 참고하여 AR(2) process의 residual로 정의하였다. 다음 그림을 참고하면 liquidity risk 변수에 대한 직관을 얻을 수 있다.
+
+![vnm7](https://user-images.githubusercontent.com/88758317/134271711-c82fc073-19c2-417f-a228-de222b59c940.png)
+
+![vnm8](https://user-images.githubusercontent.com/88758317/134271728-f57ce5d6-c2c6-4145-b03f-8d2d077fd7c2.png)
+
+![vnm9](https://user-images.githubusercontent.com/88758317/134271754-ea70c120-95ae-4709-8724-ca7c3722f5af.png)
+
+ 우선 위 테이블에서 알 수 있듯이 market liquidity risk보다는 funding liquidity risk가 value와 momentum을 더 잘 설명한다. 또한 하나 하나는 유의하지 않을지라도 val-mom의 유의성을 봐라. 이건 value와 momentum을 한번에 고려했을 때만 얻을 수 있는 결과이다. 다만 value와 momentum이 모두 liquidity risk로 완벽히 설명된다면 둘을 함께 고려했을 때의 유의한 양의 수익률은 설명할 수 없고, 이는 더욱 깊은 수수께끼로 남는다(한계를 인정). 
+
+ 이후에 asset pricing model로서 everywhere factor(전세계, 모든 자산군들에서 나타나는 value, momentum 3 factor)의 효과를 실증적으로 보이는데, 이 부분은 충분히 중요하지만 앞선 내용에 대한 robust check 느낌이고, 새로운 내용은 없는 것 같아 각자 보시면 될 것 같습니다. 
+
+# Conclusion
+
+ 앞부분에 언급했던 내용의 정리입니다. 행동경제학적 설명과 기존의 합리적 기대 가설 모두에 대한 도전이다, 제한된 자금 유동성과 차익거래 제약때문에 발생하는 것 같다. 등의 설명을 덧붙입니다.
